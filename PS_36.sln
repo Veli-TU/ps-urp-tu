@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfoSystem", "Studen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserLogin", "UserLogin\UserLogin.csproj", "{EBFC7586-8912-4626-B7A3-6E236689B27B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Expenselt", "Expenselt\Expenselt.csproj", "{ECE9B6E7-4EB7-4DEE-8285-1107122E3B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EBFC7586-8912-4626-B7A3-6E236689B27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBFC7586-8912-4626-B7A3-6E236689B27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBFC7586-8912-4626-B7A3-6E236689B27B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE9B6E7-4EB7-4DEE-8285-1107122E3B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE9B6E7-4EB7-4DEE-8285-1107122E3B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE9B6E7-4EB7-4DEE-8285-1107122E3B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE9B6E7-4EB7-4DEE-8285-1107122E3B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -37,7 +37,7 @@ namespace StudentInfoSystem
             TextBoxFakNumber.Text = student.facultyNumber;
             TextBoxKurs.Text = student.kurs;
             TextBoxPotok.Text = student.potok;
-            TextBoxGroup.Text = student.student_group;
+            //TextBoxGroup.Text = student.student_group;
         }
 
         private void Disable_All_Forms(object sender, RoutedEventArgs e)

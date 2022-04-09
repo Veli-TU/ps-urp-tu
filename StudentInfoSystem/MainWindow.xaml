@@ -4,41 +4,183 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Студентска информационна система" Height="450" Width="567"
+        Title="Студентска информационна система" Height="500" Width="800"
         ResizeMode="NoResize">
-    <Grid Name="MainGrid" Margin="0,0,10,-6">
+    <Grid Name="MainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="265*"/>
-            <ColumnDefinition Width="292*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="59*"/>
-            <RowDefinition Height="375*"/>
-        </Grid.RowDefinitions>
-        <GroupBox HorizontalAlignment="Left" Height="225" Header="Студентска информация" Margin="10,125,0,0" VerticalAlignment="Top" Width="537" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Label Content="Име:" HorizontalAlignment="Left" Margin="25,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.65,0.895" Grid.Row="1"/>
-        <Label Content="Презиме:" HorizontalAlignment="Left" Margin="25,45,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="24,85,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Име:" HorizontalAlignment="Left" Margin="25,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.65,0.895" Grid.Row="1"/>
-        <Label Content="Специалност:" HorizontalAlignment="Left" Margin="25,202,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="ОКС:" HorizontalAlignment="Left" Margin="24,240,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Факултет:" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.65,0.895" Grid.Row="1"/>
-        <Label Content="Статус:" HorizontalAlignment="Left" Margin="25,279,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Фак. номер:" HorizontalAlignment="Left" Margin="24,319,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Поток:" HorizontalAlignment="Left" Margin="83,204,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label Content="Група:" HorizontalAlignment="Left" Margin="82,244,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label Content="Курс" HorizontalAlignment="Left" Margin="83,164,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.65,0.895" Grid.Row="1" Grid.Column="1"/>
-        <TextBox x:Name="TextBoxName" TextWrapping="Wrap" Margin="113,10,231,335" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxSurname" TextWrapping="Wrap" Margin="113,50,231,295" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxLastName" TextWrapping="Wrap" Margin="113,90,231,255" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxFaculty" TextWrapping="Wrap" Margin="113,164,231,180" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxSpecalty" TextWrapping="Wrap" Margin="113,204,231,140" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxOKS" TextWrapping="Wrap" Margin="113,244,231,100" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxStatus" TextWrapping="Wrap" Margin="113,284,231,60" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxFakNumber" TextWrapping="Wrap" Margin="113,324,231,20" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TextBoxKurs" TextWrapping="Wrap" Margin="151,170,95,174" Grid.Row="1" Grid.Column="1"/>
-        <TextBox x:Name="TextBoxPotok" TextWrapping="Wrap" Margin="151,210,95,134" Grid.Row="1" Grid.Column="1"/>
-        <TextBox x:Name="TextBoxGroup" TextWrapping="Wrap" Margin="151,250,95,94" Grid.Row="1" Grid.Column="1"/>
-        <GroupBox HorizontalAlignment="Left" Height="169" Header="Лични данни" Margin="10,16,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="536" Grid.ColumnSpan="2"/>
+        <Grid Name="ImageGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Снимка"  Grid.Column="1" Grid.Row="1">
+                <Image  Grid.Column="1" Grid.Row="1" Source= "Images/no-photo.jpg">
+                    </Image>
+            </GroupBox>
+        </Grid>
+        <Grid Name="InputGrid" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Лични данни"  Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid Name="NameGrid" Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Име:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxName" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+                
+                <Label Content="Презиме:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxSurname" TextWrapping="Wrap"  Grid.Row="1" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <Label Content="Фамилия:" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxLastName" TextWrapping="Wrap" Grid.Row="1" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox  Header="Студентска информация" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid x:Name="InfoGrid" Height="202">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Факултет:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxFaculty" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <Label Content="Специалност:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxSpecalty" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <Label Content="ОКС:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxOKS" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <Label Content="Статус:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxStatus" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+                
+                <Label Content="Фак. номер:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0"/>
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxFakNumber" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+                
+                <Label Content="Курс" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2"/>
+                <Grid Grid.Row="0" Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxKurs" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <Label Content="Поток:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2"/>
+                <Grid Grid.Row="1" Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxPotok" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+                
+                <Label Content="Група:" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="2"/>
+                    <Grid Grid.Row="2" Grid.Column="3">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    <TextBox x:Name="TextBoxGroup" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+        </Grid>
     </Grid>
 </Window>
