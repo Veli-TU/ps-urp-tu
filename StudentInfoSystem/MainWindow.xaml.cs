@@ -20,9 +20,13 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private Student student;
+
+        public MainWindow(Student student)
         {
+            this.student = student;
             InitializeComponent();
+            Student_Info_In_Forms(student);
         }
 
         private void Student_Info_In_Forms(Student student)
@@ -75,5 +79,6 @@ namespace StudentInfoSystem
                 }
             }
         }
+
     }
 }

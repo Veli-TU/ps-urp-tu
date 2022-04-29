@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static UserLogin.Enums;
+using static StudentInfoSystem.Enums;
 
-namespace UserLogin
+namespace StudentInfoSystem
 {
     public static class UserData
     {

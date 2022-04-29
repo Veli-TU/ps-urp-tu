@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,13 +19,25 @@ namespace Expenselt
     /// <summary>
     /// Interaction logic for ExpenseItHome.xaml
     /// </summary>
-    public partial class ExpenseItHome : Window
+    public partial class ExpenseItHome : Window, INotifyPropertyChanged
 
     {
         public string MainCaptionText { get; set; }
         public List<Person> ExpenseDataSource { get; set; }
 
-        public DateTime LastChecked { get; set; }
+        private DateTime lastChecked;
+        public DateTime LastChecked
+        {
+            get { return lastChecked; }
+            set
+            {
+                lastChecked = value;
+            }
+        }
+
+        public ObservableCollection<string> PersonsChecked
+        { get; set; }
+
         public ExpenseItHome()
         {
             InitializeComponent();
@@ -31,27 +45,10 @@ namespace Expenselt
             LastChecked = DateTime.Now;
             MainCaptionText = "View Expense Report :";
             this.DataContext = this;
-         /*
-            ListBoxItem mike = new ListBoxItem();
-            mike.Content = "Mike";
-            peopleListBox.Items.Add(mike);
-            ListBoxItem lisa = new ListBoxItem();
-            lisa.Content = "Lisa";
-            peopleListBox.Items.Add(lisa);
-            ListBoxItem john = new ListBoxItem();
-            john.Content = "John";
-            peopleListBox.Items.Add(john);
-            ListBoxItem mary = new ListBoxItem();
-            mary.Content = "Mary";
-            peopleListBox.Items.Add(mary);
-            ListBoxItem james = new ListBoxItem();
-            james.Content = "James";
-            peopleListBox.Items.Add(james);
-            ListBoxItem david = new ListBoxItem();
-            david.Content = "David";
-            peopleListBox.Items.Add(david);
-        */
+            PersonsChecked = new ObservableCollection<string>();
         }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -134,6 +131,14 @@ namespace Expenselt
         }
         }};
             return listwithPerson;
+        }
+
+        private void PeopleListBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs("LastChecked"));
+            LastChecked = DateTime.Now;
+            PersonsChecked.Add(((Person) peopleListBox.SelectedItem).Name);
         }
     }
 }

@@ -19,6 +19,8 @@ namespace StudentInfoSystem
         public string kurs { get; set; }
         public string potok { get; set; }
         public string student_group { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
 
     }
 }
