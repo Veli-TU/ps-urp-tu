@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentInfoSystem.Login;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,6 +20,11 @@ namespace StudentInfoSystem
                 + activity;
             currentSessionActivities.Add(activityLine);
             File.AppendAllText("TestFile.txt", activityLine);
+            LoggerContext context = new LoggerContext();
+            Activity logActivity = new Activity();
+            logActivity.message = activity;
+            context.activity.Add(logActivity);
+            context.SaveChanges(); 
         }
 
         public static IEnumerable<string> GetLogActivity()

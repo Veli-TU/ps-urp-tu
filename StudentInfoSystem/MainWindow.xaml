@@ -105,7 +105,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxFaculty" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxFaculty" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2" />
                 </Grid>
 
                 <Label Content="Специалност:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
@@ -115,7 +115,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxSpecalty" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxSpecalty" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 </Grid>
 
                 <Label Content="ОКС:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
@@ -125,17 +125,17 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxOKS" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxOKS" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 </Grid>
 
-                <Label Content="Статус:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"/>
-                <Grid Grid.Row="3" Grid.Column="1">
-                    <Grid.RowDefinitions>
+                <Label Content="Група:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+                    <Grid Grid.Row="2" Grid.Column="3">
+                        <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxStatus" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                        <ListBox x:Name="TextBoxStatus" ItemsSource="{Binding StudStatusChoices}" Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
                 </Grid>
                 
                 <Label Content="Фак. номер:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0"/>
@@ -155,7 +155,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxKurs" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxKurs" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 </Grid>
 
                 <Label Content="Поток:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2"/>
@@ -165,17 +165,17 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxPotok" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxPotok" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 </Grid>
                 
-                <Label Content="Група:" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="2"/>
-                    <Grid Grid.Row="2" Grid.Column="3">
+                <Label Content="Статус:" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="2"/>
+                    <Grid Grid.Row="3" Grid.Column="1">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                    <TextBox x:Name="TextBoxGroup" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="TextBoxGroup" TextWrapping="Wrap" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 </Grid>
 
             </Grid>

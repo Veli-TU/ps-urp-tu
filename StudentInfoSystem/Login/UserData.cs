@@ -62,7 +62,10 @@ namespace StudentInfoSystem
 
         public static User IsUserPassCorrect(string username, string password)
         {
-            return (from user in TestUsers where user.Username == username && user.Password == password select user).First();
+             UserContext context = new UserContext();
+            User result =
+            (from user in context.Users where user.Username == username && user.Password == password select user).First();
+            return result;
         }
 
         public static void SetUserActiveTimeTo(string username, DateTime newActiveTime)
@@ -87,5 +90,17 @@ namespace StudentInfoSystem
                 }
             }
         }
+
+        static public void AssignUserRole(int userid, UserRoles newRole)
+        {
+            UserContext context = new UserContext();
+            User usr =
+            (from u in UserData.TestUsers
+             where u.UserId == userid
+             select u).First();
+            usr.Role = (int)newRole;
+            context.SaveChanges();
+        }
+
     }
 }

@@ -22,5 +22,16 @@ namespace StudentInfoSystem.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-DLGTR61\\SQLEXPRESS;Initial Catalog=StudentInfoDatabase;Integr" +
+            "ated Security=True")]
+        public string DbConnect {
+            get {
+                return ((string)(this["DbConnect"]));
+            }
+        }
     }
 }

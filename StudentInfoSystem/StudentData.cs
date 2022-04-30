@@ -20,11 +20,22 @@ namespace StudentInfoSystem
             student.faculty = "TestFaculty";
             student.specalty = "TestSpecalty";
             student.degree = "TestDegree";
-            student.status = "TestStatus" ;
+            student.status = 3;
             student.kurs = "TestKurs";
             student.potok = "TestPotok" ;
+            student.student_group = "Test group";
             students.Add(student) ;
             return students;
+        }
+        
+        private static Student IsThereStudent(string facNum)
+        {
+            StudentInfoContext context = new StudentInfoContext();
+            Student result =
+            (from st in context.Students
+             where st.facultyNumber == facNum
+             select st).First();
+            return result;
         }
     }
 }

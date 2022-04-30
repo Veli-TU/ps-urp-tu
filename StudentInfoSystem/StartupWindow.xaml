@@ -21,5 +21,6 @@
         <TextBox x:Name="usernameBox" TextWrapping="Wrap"  Grid.Row="0" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
         <PasswordBox x:Name="passwordBox"  Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="2"/>
         <Button Grid.Row="2" Click="Login" Grid.Column="3" Content="Login"  Name ="LoginButton"/>
+        <Button Grid.Row="2" Click="TestDB" Grid.Column="0" Content="Test"  Name ="TestDBButton"/>
     </Grid>
 </Window>

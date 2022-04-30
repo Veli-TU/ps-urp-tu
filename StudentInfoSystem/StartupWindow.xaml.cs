@@ -52,11 +52,24 @@ namespace StudentInfoSystem
                 if (student != null)
                 {
                     MainWindow studentInfoWindow = new StudentInfoSystem.MainWindow(student);
+                    Logger.LogActivity("Student "  + student.name  + " logged in");
                     studentInfoWindow.Show();
                     return;
                 }
             }
         }
+
+        private void TestDB(object sender, RoutedEventArgs e)
+        {
+
+            bool studentsEmpty = StudentInfoDBTest.TestStudentsIfEmpty();
+            if (studentsEmpty)
+                StudentInfoDBTest.CopyTestStudents();
+            bool usersEmpty = StudentInfoDBTest.TestUsersIfEmpty();
+            if (usersEmpty)
+                StudentInfoDBTest.CopyTestUsers();
+        }
+
 
     }
 }

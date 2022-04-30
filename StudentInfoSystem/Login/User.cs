@@ -9,6 +9,7 @@ namespace StudentInfoSystem
         public String FakNum { get; set; }
         public Int32 Role { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime ActiveTime { get; set; }
+        public DateTime? ActiveTime { get; set; }
+        public System.Int32 UserId { get; set; }
     }
 }
